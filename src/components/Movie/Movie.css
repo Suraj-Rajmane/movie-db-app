@@ -1,0 +1,36 @@
+.movie-card {
+    display: flex;
+    width: 30%;
+    height: 325px;
+    margin-bottom: 10px;
+    background-color: turquoise;
+    border-radius: 10px;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-image {
+    width: 50%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+@media only screen and (max-width: 1700px) {
+    .movie-card {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .movie-card {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .movie-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+.search-bar {
+    width: 80vw;
+    height: 10vh;
+    margin: 2vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBBF24;
+    
+}
+
+.flex-item {
+    width: 20%;
+    font-size: 20px;
+    padding: 8px;
+    margin: 5px;
+    height: 5vh;
+    border: 2px solid #630e1e;
+    border-radius: 10px;
+    background-color: #F3F4F5;
+}
+
+#search-button {
+    background-color: #1ef7a0;
+}
+
+@media only screen and (max-width: 768px){
+    .flex-item {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .flex-item {
+        font-size: 12px;
+    }
+}
+
+
+
