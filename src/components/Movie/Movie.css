@@ -17,26 +17,28 @@
     border-top-left-radius: 10px;
 }
 
-@media only screen and (max-width: 1700px) {
+@media screen and (max-width: 1700px) {
     .movie-card {
         width: 40%;
     }
 }
 
-@media only screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
     .movie-card {
         width: 55%;
     }
 }
 
-@media only screen and (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
     .movie-card {
         width: 80%;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .movie-card {
         width: 100%;
     }
 }
+
+ 

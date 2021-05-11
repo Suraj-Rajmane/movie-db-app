@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import MovieList from './components/MovieList/MovieList';
 import SearchBar from './components/SearchBar/SearchBar';
@@ -15,8 +15,6 @@ function App() {
 
   const fetchMovieData = () => {
 
-    
-
     let api = "";
 
     if(window.location.protocol === 'http:') {
@@ -31,13 +29,36 @@ function App() {
 
       if(result.Search) {
         // const newMovieData = [...movieData, result.Search]
-        setMovieData(result.Search);
+        setMovieData( (prevData) => [...new Set([...prevData, ...result.Search])] );
         
       }
 
     })
 
   }
+
+  const scrollEventCallback = () => {
+    const {
+      documentElement: { clientHeight, scrollTop, scrollHeight }
+    } = document;
+
+    if ((clientHeight + scrollTop >= scrollHeight - 50) && pageNumber <= 9) {
+      setPageNumber(page => page + 1);
+      fetchMovieData();
+    }
+  };
+
+  const debounce = (func, delay) => {
+    let timer;
+    return function () {
+      clearTimeout(timer);
+      timer = setTimeout(func, delay);
+    };
+  };
+
+  const debouncedScrollEventCallback = debounce(scrollEventCallback, 500);
+
+  window.addEventListener("scroll", debouncedScrollEventCallback);
 
 
   return (
