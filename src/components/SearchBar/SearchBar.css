@@ -1,20 +1,19 @@
 .search-bar {
     width: 80vw;
-    height: 10vh;
     margin: 2vh auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: #FBBF24;
-    
+    border-radius: 10px;
 }
 
 .flex-item {
     width: 20%;
     font-size: 20px;
     padding: 8px;
-    margin: 5px;
-    height: 5vh;
+    margin: 15px;
     border: 2px solid #630e1e;
     border-radius: 10px;
     background-color: #F3F4F5;
@@ -25,9 +24,18 @@
     background-color: #1ef7a0;
 }
 
+@media only screen and (max-width: 1200px){
+    .flex-item {
+        font-size: 24px;
+        
+    }
+}
+
+
 @media only screen and (max-width: 768px){
     .flex-item {
         font-size: 16px;
+        width: 35%;
     }
 }
 
